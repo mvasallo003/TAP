@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+
+</head>
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml">
+
+	<ui:define name="TituloDocumento">Elementos analógico</ui:define>
+
+	<ui:define name="TituloPagina">Elige los elementos del relΩj analógico</ui:define>
+
+	<ui:define name="Contenido">
+		<hr
+			style="height: 10px; border-width: 0; color: #ef806c; background-color: #ef806c;" />
+		<table id="tablaglobal">
+			<tr>
+				<td><br />
+
+					<h1>Caja</h1> <h:form>
+						<h:dataTable border="1" value="#{consumidorMB.cajas}" var="ca"
+							title="Cajas">
+
+							<h:column>
+								<f:facet name="header">Color</f:facet>
+								<h:outputText value="#{ca.color}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Tipo</f:facet>
+								<h:outputText value="#{ca.tipo}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Cantidades restantes</f:facet>
+								<h:outputText value="#{ca.cantidad}" />
+							</h:column>
+							<h:column>
+								<h:commandButton action="#{consumidorMB.addCaja(ca.idCaja)}"
+									value="Añadir caja" class="anadir" />
+							</h:column>
+
+						</h:dataTable>
+					</h:form> <br /></td>
+
+				<td><br />
+					<h1>Correa</h1> <h:form>
+						<h:dataTable border="1" value="#{consumidorMB.correas}" var="co"
+							title="Correas">
+							<h:column>
+								<f:facet name="header">Color</f:facet>
+								<h:outputText value="#{co.color}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Tipo</f:facet>
+								<h:outputText value="#{co.tipo}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Cantidades restantes</f:facet>
+								<h:outputText value="#{co.cantidad}" />
+							</h:column>
+							<h:column>
+								<h:commandButton action="#{consumidorMB.addCorrea(co.idCorrea)}"
+									value="Añadir correa" class="anadir" />
+							</h:column>
+
+						</h:dataTable>
+					</h:form> <br /></td>
+
+				<td><br />
+					<h1>Esfera</h1> <h:form>
+						<h:dataTable border="1" value="#{consumidorMB.esferas}" var="e"
+							title="Esferas">
+
+							<h:column>
+								<f:facet name="header">Color</f:facet>
+								<h:outputText value="#{e.color}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Forma</f:facet>
+								<h:outputText value="#{e.forma}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Tamaño</f:facet>
+								<h:outputText value="#{e.tamano}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Cantidades restantes</f:facet>
+								<h:outputText value="#{e.cantidad}" />
+							</h:column>
+							<h:column>
+								<h:commandButton action="#{consumidorMB.addEsfera(e.idEsfera)}"
+									value="Añadir esfera" class="anadir" />
+							</h:column>
+
+						</h:dataTable>
+					</h:form> <br /></td>
+			</tr>
+			<tr>
+				<td><br />
+					<h1>Número</h1> <h:form>
+						<h:dataTable border="1" value="#{consumidorMB.numeros}" var="n"
+							title="Numeros">
+
+							<h:column>
+								<f:facet name="header">Colores</f:facet>
+								<h:outputText value="#{n.colores}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Formato</f:facet>
+								<h:outputText value="#{n.formato}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Cantidades restantes</f:facet>
+								<h:outputText value="#{n.cantidad}" />
+							</h:column>
+							<h:column>
+								<h:commandButton action="#{consumidorMB.addNumero(n.idNumeros)}"
+									value="Añadir numero" class="anadir" />
+							</h:column>
+
+						</h:dataTable>
+					</h:form> <br /></td>
+				<td><br />
+					<h1>Segundero</h1> <h:form>
+						<h:dataTable border="1" value="#{consumidorMB.segunderos}" var="s"
+							title="Segunderos">
+
+							<h:column>
+								<f:facet name="header">Color</f:facet>
+								<h:outputText value="#{s.color}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">Cantidades restantes</f:facet>
+								<h:outputText value="#{s.cantidad}" />
+							</h:column>
+							<h:column>
+								<h:commandButton
+									action="#{consumidorMB.addSegundero(s.idSegundero)}"
+									value="Añadir segundero" class="anadir" />
+							</h:column>
+
+						</h:dataTable>
+					</h:form><br /></td>
+				<td><br /> <h:form>
+						<h:commandButton action="#{consumidorMB.comprar}"
+							value="Comprar reloj" class="comprar" />
+					</h:form></td>
+			</tr>
+		</table>
+		<hr
+			style="height: 10px; border-width: 0; color: #ef806c; background-color: #ef806c;" />
+	</ui:define>
+
+</ui:composition>
+
+</html>

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+
+
+#tablaglobal{
+	font-family: "Copperplate Gothic";
+	margin: auto;
+	text-align: center;
+	background-color: #626567;
+	border-width: 0px;
+}
+
+table {
+	font-family: "Copperplate Gothic";
+	margin: auto;
+	text-align: center;
+	background-color: beige;
+  	border-style: groove;
+	border-color: black;
+	border-width: 1px;
+	width: 1000px; 
+    height: 100px;
+    font-size: 20px;
+} 
+
+th {
+	font-family: "Copperplate Gothic";
+	color: black;
+	background-color:  #ef806c;
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	
+} 
+
+tr,td, th{
+	font-family: "Copperplate Gothic";
+    height: 0.7cm;
+    color: black;
+}
+
+body {
+	font-family: Copperplate Gothic;
+    background-color: #626567;
+    color: white;
+}
+
+buttons {
+	font-family: "Copperplate Gothic";
+	width: 100px;
+	height: 50px;
+	font-size: 30px;
+}
+.anadir{
+	font-family: "Copperplate Gothic";
+	width: 180px;
+	height: 40px;
+	font-size: 20px;
+}
+.comprar{
+	font-family : inherit;
+	font-size: 35px;
+	display: block;
+	position: relative;
+	margin: auto;
+	width: 300px;
+	height: 100px;
+	background-color: #ef806c;
+	text-align: center;
+	border-radius: 100%;
+}
+
+#cuadro {
+	font-family: "Copperplate Gothic";
+	margin: auto;
+	text-align: center;
+	background-color: beige;
+	font-size: 20px;
+	width: 650px;
+	border-style: groove;
+	border-color: black;
+	border-width: 0px;
+}
+h1{
+	font-family: Copperplate Gothic;
+	font-size: 40px;
+	color: white;
+	
+}
+
